@@ -1,11 +1,32 @@
 .App {
   text-align: center;
+  overflow: hidden;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
+
+.cusheadingh2 {
+  font-size: 32px;
+  padding: 15px;
+  background-color: #61dafb;
+  color: #282c34;
+  display: block;
+  width: 100%;
+}
+
+section{
+  overflow: hidden;
+  width: 100%;
+  /* padding: 50px 0; */
+  margin-bottom: 30px;
+}
+h2{
+  margin: 0;
+}
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -19,7 +40,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
   font-size: calc(10px + 2vmin);
   color: white;
 }

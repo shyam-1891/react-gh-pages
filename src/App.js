@@ -1,23 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import Training from './components/Training';
+import bookdata from './data/bookdata';
+// import Bookcompo from './components/Bookdata/Bookcompo';
+import Formcompo from './components/Form/formcompo';
+import Tictactoe from './components/Tictactoe/Tictactoe';
+
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Tictactoe />
+
+        {/* <Bookcompo bookdata={bookdata} test={'Hello'}/> */}
+
+        <Formcompo bookdata={bookdata}/>
+        {/* <Training /> */}
+
+      </header>      
     </div>
   );
 }

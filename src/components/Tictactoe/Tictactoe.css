@@ -1,0 +1,42 @@
+.Tictactoe-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    width: 200px;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    font-family: Verdana, "Geneva", Tahoma, sans-serif;
+    margin: 0 auto;
+}
+.Tictactoe-wrapper span{
+    border: 1px solid #000;
+    width: 31%;
+    height: 64px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    background-color: #fff;
+    color: red;
+    cursor: pointer;
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 700;
+}
+.Tictactoe-wrapper span.suss{
+    background-color: aquamarine;
+}
+h4.winner{
+    color: greenyellow;
+    font-size: 22px;
+    text-decoration: underline;
+}
+button.reset{
+    padding: 15px 20px;
+    color: #000;
+    background-color: aqua;
+    margin: 20px 0 0;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+}
