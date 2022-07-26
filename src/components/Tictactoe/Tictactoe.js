@@ -26,7 +26,7 @@ export default function Tictactoe(){
     const [no_click, setno_click] = useState(1);
 
     useEffect(() => {
-        console.log("use effect start");
+        // console.log("use effect start");
         if(winner == 0){
             checkwinner(allfilled_x,allfilled_o);              
         }else{
@@ -38,7 +38,9 @@ export default function Tictactoe(){
         if(allfilled_x.length > 2){
             for(let i=0;i<allfilled_x.length;i++){                
                 for(let j=i+1;j<allfilled_x.length;j++){                    
-                    let checkitem_x = allfilled_x[i]+":"+allfilled_x[j]+":"+allfilled_x[j+1];                    
+                    let checkitem_x = allfilled_x[i]+":"+allfilled_x[j]+":"+allfilled_x[j+1];
+                    let checkitem_xx = allfilled_x[i]+":"+allfilled_x[j]+":"+allfilled_x[j+2];
+                    let checkitem_xxx = allfilled_x[i]+":"+allfilled_x[j]+":"+allfilled_x[j+3];                    
                     if(succarr.includes(checkitem_x)){
                         setwinnername("Winner is x");
                         setwinner(1);
@@ -46,6 +48,20 @@ export default function Tictactoe(){
                         document.getElementById(allfilled_x[i]).classList.add("suss");
                         document.getElementById(allfilled_x[j]).classList.add("suss");
                         document.getElementById(allfilled_x[j+1]).classList.add("suss");
+                    }else if(succarr.includes(checkitem_xx)){
+                        setwinnername("Winner is x");
+                        setwinner(1);
+                        setplayer("c");
+                        document.getElementById(allfilled_x[i]).classList.add("suss");
+                        document.getElementById(allfilled_x[j]).classList.add("suss");
+                        document.getElementById(allfilled_x[j+2]).classList.add("suss");
+                    }else if(succarr.includes(checkitem_xxx)){
+                        setwinnername("Winner is x");
+                        setwinner(1);
+                        setplayer("c");
+                        document.getElementById(allfilled_x[i]).classList.add("suss");
+                        document.getElementById(allfilled_x[j]).classList.add("suss");
+                        document.getElementById(allfilled_x[j+3]).classList.add("suss");
                     }
                 }
             }
@@ -55,6 +71,8 @@ export default function Tictactoe(){
             for(let k=0;k<allfilled_o.length;k++){                
                 for(let l=k+1;l<allfilled_o.length;l++){                    
                     let checkitem_o = allfilled_o[k]+":"+allfilled_o[l]+":"+allfilled_o[l+1];
+                    let checkitem_oo = allfilled_o[k]+":"+allfilled_o[l]+":"+allfilled_o[l+2];
+                    let checkitem_ooo = allfilled_o[k]+":"+allfilled_o[l]+":"+allfilled_o[l+3];                    
                     if(succarr.includes(checkitem_o)){
                         setwinnername("Winner is o");
                         setwinner(1);
@@ -62,6 +80,20 @@ export default function Tictactoe(){
                         document.getElementById(allfilled_o[k]).classList.add("suss");
                         document.getElementById(allfilled_o[l]).classList.add("suss");
                         document.getElementById(allfilled_o[l+1]).classList.add("suss");
+                    }else if(succarr.includes(checkitem_oo)){
+                        setwinnername("Winner is o");
+                        setwinner(1);
+                        setplayer("c");
+                        document.getElementById(allfilled_o[k]).classList.add("suss");
+                        document.getElementById(allfilled_o[l]).classList.add("suss");
+                        document.getElementById(allfilled_o[l+2]).classList.add("suss");
+                    }else if(succarr.includes(checkitem_ooo)){
+                        setwinnername("Winner is o");
+                        setwinner(1);
+                        setplayer("c");
+                        document.getElementById(allfilled_o[k]).classList.add("suss");
+                        document.getElementById(allfilled_o[l]).classList.add("suss");
+                        document.getElementById(allfilled_o[l+3]).classList.add("suss");
                     }
                 }
             }
@@ -111,17 +143,33 @@ export default function Tictactoe(){
     }
 
     return(
-        <section>
-            <H2Heading heading="Tic tac toe" />
-            { player == 'c' ? '' : <h4>Next player: "{player}"</h4> }
-            { winnername != '' ? <h4 className='winner'>{winnername}</h4> : '' }
-            <div className='Tictactoe-wrapper'>
-                {   boxarr.map((item, index)=>{
-                        return <span className='tictactoe_box' id={item} val={item} key={index} onClick={() => updateValue(item)}></span>
-                    })
-                }               
+        <section className="area bg_cover pt-120 pb-120">
+            <div className="container">
+                <div className="row justify-content-center">
+                    <div className="col-lg-4">
+                        <div className="section-title text-center pb-20 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+                            <H2Heading heading="Tic tac toe" />
+                            { player == 'c' ? '' : <h4>Next player: "{player}"</h4> }
+                            { winnername != '' ? <h4><span className='badge badge-success'>{winnername}</span></h4> : '' }
+                        </div>
+                    </div>
+                </div>
+                <div className="contact-info pt-30">
+                    <div className="row justify-content-center">
+                        <div className="col-lg-4 col-md-6">
+                            
+                            <div className='Tictactoe-wrapper'>
+                                {   boxarr.map((item, index)=>{
+                                        return <span className='tictactoe_box' id={item} val={item} key={index} onClick={() => updateValue(item)}></span>
+                                    })
+                                }               
+                            </div>
+                            { winner == '1' ? <button className='btn btn-warning reset' onClick={() => resetgame()}>Reset</button> : '' }
+                        </div>
+                    </div>
+                </div>
+                
             </div>
-            { winner == '1' ? <button className='reset' onClick={() => resetgame()}>Reset</button> : '' }
         </section>
     )
 }

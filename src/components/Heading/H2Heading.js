@@ -1,8 +1,8 @@
 import React from 'react'
 
 function H2Heading(props) {
-  return (
-    <h2 className='cusheadingh2'>{props.heading}</h2>
+  return (    
+    <h4 className="title">{props.heading}</h4>
   )
 }
 

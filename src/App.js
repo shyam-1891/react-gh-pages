@@ -1,23 +1,31 @@
-import './App.css';
-import Training from './components/Training';
-import bookdata from './data/bookdata';
+// import './App.css';
+// <!--====== CSS ======-->
+import './assets/css/font-awesome.min.css';
+import './assets/css/animate.css';
+import './assets/css/bootstrap.min.css';
+import './assets/css/default.css';
+import './assets/css/style.css';
+import './assets/css/custom.css'
+
+// <!--====== Components ======-->
+// import Training from './components/Training';
+// import bookdata from './data/bookdata';
 // import Bookcompo from './components/Bookdata/Bookcompo';
-import Formcompo from './components/Form/formcompo';
+import Texttool from './components/Texttool/Texttool';
 import Tictactoe from './components/Tictactoe/Tictactoe';
+// import News from './components/News/News';
 
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+        <Texttool demo="this is prop demo" />
+        
         <Tictactoe />
 
-        {/* <Bookcompo bookdata={bookdata} test={'Hello'}/> */}
-
-        <Formcompo bookdata={bookdata}/>
-        {/* <Training /> */}
-
-      </header>      
+        {/* <News /> */}
+        {/* <Bookcompo bookdata={bookdata} test={'Hello'}/> */}        
+        {/* <Training /> */}          
     </div>
   );
 }

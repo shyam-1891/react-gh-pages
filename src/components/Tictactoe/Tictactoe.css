@@ -32,11 +32,7 @@ h4.winner{
     text-decoration: underline;
 }
 button.reset{
-    padding: 15px 20px;
-    color: #000;
-    background-color: aqua;
-    margin: 20px 0 0;
-    font-size: 18px;
-    border: none;
-    border-radius: 10px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
