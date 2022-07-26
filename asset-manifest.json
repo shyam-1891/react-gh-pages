@@ -1,15 +1,21 @@
 {
   "files": {
-    "main.css": "/react-gh-pages/static/css/main.dd97c1f7.css",
-    "main.js": "/react-gh-pages/static/js/main.6c8cd5f8.js",
+    "main.css": "/react-gh-pages/static/css/main.468b8b80.css",
+    "main.js": "/react-gh-pages/static/js/main.4d4e7cbc.js",
     "static/js/787.b701888c.chunk.js": "/react-gh-pages/static/js/787.b701888c.chunk.js",
+    "static/media/fontawesome-webfont.svg?v=4.7.0": "/react-gh-pages/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
+    "static/media/fontawesome-webfont.eot": "/react-gh-pages/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
+    "static/media/fontawesome-webfont.ttf?v=4.7.0": "/react-gh-pages/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
+    "static/media/fontawesome-webfont.woff?v=4.7.0": "/react-gh-pages/static/media/fontawesome-webfont.f691f37e57f04c152e23.woff",
+    "static/media/fontawesome-webfont.woff2?v=4.7.0": "/react-gh-pages/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
+    "static/media/header-hero.jpg": "/react-gh-pages/static/media/header-hero.2035a983c92929e4808f.jpg",
     "index.html": "/react-gh-pages/index.html",
-    "main.dd97c1f7.css.map": "/react-gh-pages/static/css/main.dd97c1f7.css.map",
-    "main.6c8cd5f8.js.map": "/react-gh-pages/static/js/main.6c8cd5f8.js.map",
+    "main.468b8b80.css.map": "/react-gh-pages/static/css/main.468b8b80.css.map",
+    "main.4d4e7cbc.js.map": "/react-gh-pages/static/js/main.4d4e7cbc.js.map",
     "787.b701888c.chunk.js.map": "/react-gh-pages/static/js/787.b701888c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.dd97c1f7.css",
-    "static/js/main.6c8cd5f8.js"
+    "static/css/main.468b8b80.css",
+    "static/js/main.4d4e7cbc.js"
   ]
 }
